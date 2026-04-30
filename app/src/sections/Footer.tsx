@@ -93,7 +93,7 @@ export default function Footer() {
             <span
               key={i}
               ref={(el) => { watermarkLettersRef.current[i] = el }}
-              className="inline-block text-[18vw] sm:text-[20vw] font-black italic text-black/[0.03] will-change-transform"
+              className="inline-block text-[18vw] sm:text-[20vw] font-black italic text-black/[0.03] will-change-transform pr-[0.5vw]"
             >
               {char}
             </span>
@@ -129,7 +129,7 @@ export default function Footer() {
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-8 mb-10 sm:mb-16">
           <div className="col-span-2 lg:col-span-1">
-            <button onClick={() => scrollToSection('#')} className="text-2xl sm:text-3xl font-black italic text-black pr-1">dobby</button>
+            <button onClick={() => scrollToSection('#')} className="text-2xl sm:text-3xl font-black italic text-black pr-2">dobby</button>
             <p className="mt-3 sm:mt-4 text-grey-400 leading-relaxed text-xs sm:text-sm">
               Science-backed haircare that targets the root, not just the symptom.
             </p>

@@ -75,7 +75,7 @@ export default function AnimatedLogo({ className, onClick }: AnimatedLogoProps) 
       ref={containerRef}
       onClick={onClick}
       className={cn(
-        'relative flex items-baseline select-none will-change-transform pr-1',
+        'relative flex items-baseline select-none will-change-transform overflow-visible pr-[3px]',
         className
       )}
     >
@@ -83,7 +83,7 @@ export default function AnimatedLogo({ className, onClick }: AnimatedLogoProps) 
         <span
           key={i}
           ref={(el) => { lettersRef.current[i] = el }}
-          className="inline-block text-[28px] font-black italic tracking-tight will-change-transform"
+          className="inline-block text-[28px] font-black italic tracking-tight will-change-transform pr-[3px]"
         >
           {char}
         </span>
