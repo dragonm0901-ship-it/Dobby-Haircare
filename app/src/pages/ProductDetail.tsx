@@ -64,7 +64,7 @@ export default function ProductDetail() {
       <div className="min-h-screen flex items-center justify-center bg-bg">
         <Navbar />
         <div className="text-center">
-          <h2 className="text-3xl font-black mb-4">Product Not Found</h2>
+          <h2 className="text-2xl sm:text-3xl font-black mb-4">Product Not Found</h2>
           <Link to="/shop" className="text-purple font-bold hover:underline">Return to Shop</Link>
         </div>
       </div>
@@ -76,20 +76,20 @@ export default function ProductDetail() {
       <GrainOverlay />
       <Navbar />
 
-      <div className="pt-32 lg:pt-48 pb-32">
+      <div className="pt-24 sm:pt-32 lg:pt-48 pb-20 sm:pb-32">
         <div className="section-container">
           {/* Back Button */}
           <Link 
             to="/shop" 
-            className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-black/40 hover:text-purple transition-colors mb-12"
+            className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-black/40 hover:text-purple transition-colors mb-8 sm:mb-12"
           >
             <ArrowLeft size={14} />
             Back to Collection
           </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24 items-start">
             {/* Image Gallery */}
-            <div ref={imageRef} className="relative aspect-[4/5] bg-grey-100 rounded-3xl overflow-hidden flex items-center justify-center p-12">
+            <div ref={imageRef} className="relative aspect-[4/5] bg-grey-100 rounded-2xl sm:rounded-3xl overflow-hidden flex items-center justify-center p-6 sm:p-12">
               <img 
                 src={product.image} 
                 alt={product.name}
@@ -99,8 +99,8 @@ export default function ProductDetail() {
                 className="w-full h-full object-contain"
               />
               {product.badge && (
-                <div className="absolute top-8 left-8">
-                  <span className="px-4 py-1.5 bg-purple text-white text-[10px] font-black uppercase tracking-widest rounded-full">
+                <div className="absolute top-4 left-4 sm:top-8 sm:left-8">
+                  <span className="px-3 py-1 sm:px-4 sm:py-1.5 bg-purple text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-full">
                     {product.badge}
                   </span>
                 </div>
@@ -110,38 +110,38 @@ export default function ProductDetail() {
             {/* Content */}
             <div ref={contentRef}>
               <div className="reveal-text">
-                <span className="text-xs font-black uppercase tracking-[0.3em] text-purple mb-4 block">
+                <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-purple mb-3 sm:mb-4 block">
                   {product.category}
                 </span>
-                <h1 className="text-5xl lg:text-7xl font-black uppercase leading-[0.9] tracking-tighter mb-6">
+                <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black uppercase leading-[0.9] tracking-tighter mb-4 sm:mb-6">
                   {product.name}
                 </h1>
-                <div className="text-3xl font-black text-purple mb-8">
+                <div className="text-2xl sm:text-3xl font-black text-purple mb-6 sm:mb-8">
                   {product.price}
                 </div>
               </div>
 
-              <div className="reveal-text space-y-8 mb-12">
-                <div className="space-y-4">
-                  <h3 className="text-xs font-black uppercase tracking-[0.2em] text-black/20">The Formula</h3>
-                  <p className="text-xl text-black/70 leading-relaxed italic">
+              <div className="reveal-text space-y-6 sm:space-y-8 mb-8 sm:mb-12">
+                <div className="space-y-3 sm:space-y-4">
+                  <h3 className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-black/20">The Formula</h3>
+                  <p className="text-base sm:text-xl text-black/70 leading-relaxed italic">
                     {product.longDescription}
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-black/20">Ritual</h3>
-                    <p className="text-sm text-grey-400 leading-relaxed">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                  <div className="space-y-3 sm:space-y-4">
+                    <h3 className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-black/20">Ritual</h3>
+                    <p className="text-xs sm:text-sm text-grey-400 leading-relaxed">
                       {product.usage}
                     </p>
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-xs font-black uppercase tracking-[0.2em] text-black/20">Clinical Benefits</h3>
-                    <div className="space-y-2">
+                  <div className="space-y-3 sm:space-y-4">
+                    <h3 className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-black/20">Clinical Benefits</h3>
+                    <div className="space-y-1.5 sm:space-y-2">
                       {product.benefits.map((benefit) => (
-                        <div key={benefit} className="benefit-item flex items-center gap-2 text-sm font-bold text-black/60">
-                          <CheckCircle2 size={16} className="text-purple" />
+                        <div key={benefit} className="benefit-item flex items-center gap-2 text-xs sm:text-sm font-bold text-black/60">
+                          <CheckCircle2 size={14} className="text-purple flex-shrink-0" />
                           {benefit}
                         </div>
                       ))}
@@ -153,7 +153,7 @@ export default function ProductDetail() {
               <div className="reveal-text">
                 <button 
                   onClick={() => addToCart({ id: product.id, name: product.name, price: product.price, image: product.image })}
-                  className="w-full py-6 bg-black text-white text-sm font-black uppercase tracking-[0.4em] rounded-full hover:bg-purple transition-all duration-500 active:scale-95 shadow-xl shadow-black/10"
+                  className="w-full py-4 sm:py-6 bg-black text-white text-xs sm:text-sm font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] rounded-full hover:bg-purple transition-all duration-500 active:scale-95 shadow-xl shadow-black/10"
                 >
                   Add to Collection
                 </button>

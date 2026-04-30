@@ -85,6 +85,7 @@ export default function Navbar() {
       const wrapperRect = wrapper.getBoundingClientRect()
       const linkRect = link.getBoundingClientRect()
 
+      gsap.killTweensOf(slider)
       gsap.to(slider, {
         x: linkRect.left - wrapperRect.left,
         width: linkRect.width,
@@ -93,9 +94,11 @@ export default function Navbar() {
         ease: 'elastic.out(0.1, 1.7)',
       })
     } else {
+      gsap.killTweensOf(slider)
       gsap.to(slider, {
         opacity: 0,
-        duration: 0.3,
+        width: 0,
+        duration: 0.25,
         ease: 'power2.in',
       })
     }

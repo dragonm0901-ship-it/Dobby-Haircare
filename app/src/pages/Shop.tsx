@@ -50,16 +50,16 @@ export default function ShopPage() {
       <Navbar />
 
       {/* Header Area */}
-      <div className="pt-32 lg:pt-48 pb-20">
+      <div className="pt-24 sm:pt-32 lg:pt-48 pb-12 sm:pb-20">
         <div className="section-container">
           <div ref={headerRef} className="max-w-4xl">
-            <span className="section-label mb-6">Discovery</span>
-            <h1 className="text-6xl sm:text-8xl lg:text-[10vw] font-black uppercase leading-[0.85] tracking-tighter mb-8">
+            <span className="section-label mb-4 sm:mb-6">Discovery</span>
+            <h1 className="text-[2.5rem] sm:text-8xl lg:text-[10vw] font-black uppercase leading-[0.85] tracking-tighter mb-5 sm:mb-8">
               The Full
               <br />
-              <span className="text-purple italic">Collection</span>
+              <span className="text-purple">Collection</span>
             </h1>
-            <p className="text-xl text-grey-400 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-xl text-grey-400 max-w-xl leading-relaxed">
               Explore the complete dobby ecosystem. From root to tip, every formula is engineered for clinical performance.
             </p>
           </div>
@@ -67,8 +67,8 @@ export default function ShopPage() {
       </div>
 
       {/* Product Grid */}
-      <div className="section-container pb-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+      <div className="section-container pb-20 sm:pb-32">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 sm:gap-x-8 sm:gap-y-12">
           {products.map((product) => (
             <div key={product.id} className="shop-card">
               <Link to={`/product/${product.id}`}>

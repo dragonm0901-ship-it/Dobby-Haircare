@@ -44,30 +44,30 @@ export default function GeometricLines({ className }: GeometricLinesProps) {
         stroke="#C2B6FF"
         strokeWidth="2"
         fill="none"
-        opacity="0.6"
+        opacity="0.3"
       />
       <path
         className="hero-line"
-        d="M1400,100 L-100,700"
+        d="M1700,100 L-100,700"
         stroke="#C2B6FF"
-        strokeWidth="1"
+        strokeWidth="1.5"
         fill="none"
-        opacity="0.4"
+        opacity="0.3"
       />
       <path
         className="hero-line"
         d="M200,-100 L800,900"
         stroke="#C2B6FF"
-        strokeWidth="0.5"
+        strokeWidth="1"
         fill="none"
         opacity="0.3"
       />
 
       <path
         className="hero-line"
-        d="M200,-100 L800,900"
+        d="M500,-500 L100,900"
         stroke="#C2B6FF"
-        strokeWidth="0.5"
+        strokeWidth="1.2"
         fill="none"
         opacity="0.3"
       />

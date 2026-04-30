@@ -6,11 +6,11 @@ export default function About() {
   return (
     <section id="about" className="relative section-padding bg-bg overflow-hidden">
       <div className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* Left — Text */}
           <ScrollReveal direction="up" stagger={0.1}>
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <span className="section-label">Our Story</span>
 
               <h2 className="section-heading">
@@ -19,7 +19,7 @@ export default function About() {
                 In Science
               </h2>
 
-              <div className="space-y-4 text-grey-600 text-lg leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-grey-600 text-base sm:text-lg leading-relaxed">
                 <p>
                   We believe in powerful, clean ingredients that target the root of the
                   problem, not just the symptoms. Our formulas are dermatologically
@@ -33,29 +33,29 @@ export default function About() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-4">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-2 sm:pt-4">
                 <div>
                   <AnimatedCounter
                     target={98}
                     suffix="%"
-                    className="text-3xl lg:text-4xl font-black text-purple"
+                    className="text-2xl sm:text-3xl lg:text-4xl font-black text-purple"
                   />
-                  <p className="text-sm text-grey-400 mt-1">Natural Ingredients</p>
+                  <p className="text-xs sm:text-sm text-grey-400 mt-1">Natural Ingredients</p>
                 </div>
                 <div>
                   <AnimatedCounter
                     target={50}
                     suffix="K+"
-                    className="text-3xl lg:text-4xl font-black text-purple"
+                    className="text-2xl sm:text-3xl lg:text-4xl font-black text-purple"
                   />
-                  <p className="text-sm text-grey-400 mt-1">Happy Customers</p>
+                  <p className="text-xs sm:text-sm text-grey-400 mt-1">Happy Customers</p>
                 </div>
                 <div>
                   <AnimatedCounter
                     target={4.9}
-                    className="text-3xl lg:text-4xl font-black text-purple"
+                    className="text-2xl sm:text-3xl lg:text-4xl font-black text-purple"
                   />
-                  <p className="text-sm text-grey-400 mt-1">Average Rating</p>
+                  <p className="text-xs sm:text-sm text-grey-400 mt-1">Average Rating</p>
                 </div>
               </div>
             </div>

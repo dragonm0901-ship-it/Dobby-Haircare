@@ -75,7 +75,7 @@ export default function AnimatedLogo({ className, onClick }: AnimatedLogoProps) 
       ref={containerRef}
       onClick={onClick}
       className={cn(
-        'relative flex items-baseline select-none will-change-transform',
+        'relative flex items-baseline select-none will-change-transform pr-1',
         className
       )}
     >
